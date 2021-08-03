@@ -309,9 +309,9 @@ public class CreeperMinionEntity extends ShoulderRidingEntity {
 						itemstack.shrink(1);
 						EntityUtil.spawnParticlesAtEntity(this, ParticleTypes.HEART, 1);
 						return true;
-					} else if (this.getMaxHealth() < 20.0F) {
-						this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(this.getMaxHealth() + 1.0F);
-						itemstack.shrink(1);
+					} else if (this.getMaxHealth() < 10000.0F) {
+						this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(this.getMaxHealth() + 0.5F);
+						itemstack.shrink(64);
 						EntityUtil.spawnParticlesAtEntity(this, ParticleTypes.HEART, 1);
 						return true;
 					}
